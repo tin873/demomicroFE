@@ -12,4 +12,9 @@ export class Page2Component implements OnInit {
   ngOnInit() {
   }
 
+  pushData(){
+    const event = new CustomEvent('eventCustom', { detail: 1 });
+    dispatchEvent(event);
+  }
+
 }

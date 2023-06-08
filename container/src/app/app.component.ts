@@ -9,27 +9,18 @@ import { SingleSpaService } from 'src/services/single-spa.service';
 })
 export class AppComponent implements OnInit {
 
-  title = 'container';
+  title = 'Thời trang thế giới';
   name: string="";
-
-  @ViewChild('appContainer', { static: true })
-  appContainerRef: ElementRef;
   constructor(private singleSpaService: SingleSpaService) { }
 
+
   ngOnInit() {
-    this.mount().subscribe();
+    this.mountElement1().subscribe();
   }
 
-  mount(): Observable<unknown> {
-    return this.singleSpaService.mount('child1', this.appContainerRef.nativeElement);
-  }
-
-  unmount(): Observable<unknown> {
-    return this.singleSpaService.unmount('child1');
-  }
-
-  pushData(){
-    const event = new CustomEvent('eventCustom', { detail: this.name });
-    dispatchEvent(event);
+  @ViewChild('appContainer1', { static: true })
+  appContainerRef1: ElementRef;
+  mountElement1(): Observable<unknown> {
+    return this.singleSpaService.mount('child1', this.appContainerRef1.nativeElement);
   }
 }

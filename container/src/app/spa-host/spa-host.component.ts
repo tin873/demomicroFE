@@ -15,6 +15,7 @@ export class SpaHostComponent implements OnInit {
   @ViewChild('appContainer', { static: true })
   appContainerRef: ElementRef;
 
+
   appName: string;
 
   ngOnInit() {

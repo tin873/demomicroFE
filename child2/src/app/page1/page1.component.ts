@@ -12,10 +12,11 @@ export class Page1Component implements OnInit {
   name: string='';
 
   ngOnInit() {
-    fromEvent(window, 'eventCustom').subscribe((event: any) => {
-      console.log(event);
-      this.name = event;
-    })
+
+  }
+  pushData(){
+    const event = new CustomEvent('eventCustom', { detail: 1 });
+    dispatchEvent(event);
   }
 
 }
