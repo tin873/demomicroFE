@@ -15,7 +15,7 @@ const routes: Routes = [{
       path: 'page2',
       component: Page1Component
     }, {
-      path: 'page1',
+      path: '',
       component: Page2Component
     }]
 }, {
