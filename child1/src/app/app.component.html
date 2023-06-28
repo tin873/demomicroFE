@@ -22,5 +22,6 @@
     <li><h2><a routerLink="/">Thời trang nữ</a></h2></li>
     <li><h2><a routerLink="/page2">Thời trang nam</a></h2></li>
   </ul>
-  <div style="margin-top: 50px;">hiện đang có <b>{{count}}</b> sản phẩm trong giỏ hàng</div>
+  <!-- <div>Đang có {{(data$ | async)?.data}} sản phẩm trong giỏ hàng!</div> -->
+  <div> <lib-lib-test-tin-spa [count]="count"></lib-lib-test-tin-spa></div>
 </div>

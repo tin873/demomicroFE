@@ -22,7 +22,8 @@ import { createCustomElement } from '@angular/elements';
   providers: [{
     provide: RouteReuseStrategy,
     useClass: MicroFrontendRouteReuseStrategy
-  }],
+  }
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { 

@@ -122,6 +122,86 @@
           }
         }
       }
+    },
+    "common-package-tin-test": {
+      "projectType": "library",
+      "root": "projects/common-package-tin-test",
+      "sourceRoot": "projects/common-package-tin-test/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/common-package-tin-test/tsconfig.lib.json",
+            "project": "projects/common-package-tin-test/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/common-package-tin-test/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/common-package-tin-test/src/test.ts",
+            "tsConfig": "projects/common-package-tin-test/tsconfig.spec.json",
+            "karmaConfig": "projects/common-package-tin-test/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/common-package-tin-test/tsconfig.lib.json",
+              "projects/common-package-tin-test/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "common-pk-lib-tin-test": {
+      "projectType": "library",
+      "root": "projects/common-pk-lib-tin-test",
+      "sourceRoot": "projects/common-pk-lib-tin-test/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/common-pk-lib-tin-test/tsconfig.lib.json",
+            "project": "projects/common-pk-lib-tin-test/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/common-pk-lib-tin-test/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/common-pk-lib-tin-test/src/test.ts",
+            "tsConfig": "projects/common-pk-lib-tin-test/tsconfig.spec.json",
+            "karmaConfig": "projects/common-pk-lib-tin-test/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/common-pk-lib-tin-test/tsconfig.lib.json",
+              "projects/common-pk-lib-tin-test/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "child1",

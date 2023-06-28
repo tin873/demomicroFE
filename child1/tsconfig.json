@@ -12,6 +12,18 @@
     },
     {
       "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/common-package-tin-test/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/common-package-tin-test/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/common-pk-lib-tin-test/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/common-pk-lib-tin-test/tsconfig.spec.json"
     }
   ]
 }
